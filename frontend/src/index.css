@@ -26,3 +26,16 @@ a.active hr {
     color: white;
   }
 }
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: auto; /* все современные браузеры */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: spinner; /* Chrome / Edge */
+  appearance: spinner;
+  margin: 0;
+  height: auto;
+}
