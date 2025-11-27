@@ -27,15 +27,15 @@ a.active hr {
   }
 }
 
-input[type="number"] {
-  -moz-appearance: textfield; /* Firefox */
-  appearance: auto; /* все современные браузеры */
-}
-
+/* Вернуть стрелки для Chrome, Edge, Safari */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: spinner; /* Chrome / Edge */
-  appearance: spinner;
+  -webkit-appearance: auto !important;
   margin: 0;
-  height: auto;
+}
+
+/* Вернуть стрелки для Firefox */
+input[type="number"] {
+  -moz-appearance: auto !important;
+  appearance: auto !important;
 }
