@@ -31,9 +31,11 @@ const Collection = () => {
   const applyFilter = () => {
     let productCopy = products.slice();
 
-if (showSearch && search) {
-  productCopy = productCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
-}
+    if (showSearch && search) {
+      productCopy = productCopy.filter((item) =>
+        item.name.toLowerCase().includes(search.toLowerCase())
+      );
+    }
 
     if (category.length > 0) {
       productCopy = productCopy.filter((item) =>
@@ -68,7 +70,7 @@ if (showSearch && search) {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory, search, showSearch]);
+  }, [category, subCategory, search, showSearch, products]);
 
   useEffect(() => {
     sortProducts();
